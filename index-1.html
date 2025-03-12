@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processo de Compra - PromoMarket</title>
+    <style>
+        .process-section { padding: 60px 0; background: #f8f9fa; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .process-wrapper { display: flex; gap: 30px; }
+        .menu-list { width: 30%; list-style: none; padding: 0; margin: 0; }
+        .menu-item { 
+            background: #fff; 
+            border-radius: 8px; 
+            padding: 15px 20px; 
+            margin-bottom: 15px; 
+            color: #4B0082; 
+            font-weight: 500; 
+            cursor: pointer; 
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); 
+            transition: all 0.3s ease; 
+        }
+        .menu-item:hover { 
+            background: #4B0082; 
+            color: #fff; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+        }
+        .content-area { 
+            width: 70%; 
+            background: #fff; 
+            border-radius: 8px; 
+            padding: 30px; 
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); 
+            position: relative; 
+            min-height: 300px; 
+        }
+        .content-item { 
+            display: none; 
+            opacity: 0; 
+            transition: opacity 0.3s ease; 
+        }
+        .content-item.active { 
+            display: block; 
+            opacity: 1; 
+        }
+        .content-item h3 { color: #4B0082; font-weight: bold; margin-bottom: 20px; }
+        .content-item p { color: #6c757d; font-size: 1.1rem; }
+        @media (max-width: 767px) {
+            .process-wrapper { flex-direction: column; }
+            .menu-list, .content-area { width: 100%; }
+            .content-area { margin-top: 20px; }
+            .menu-item { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Seção de Processo de Compra -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="text-center mb-5" style="font-size: 2.5rem; font-weight: bold; color: #333;">Como Comprar no PromoMarket</h2>
+            <div class="process-wrapper">
+                <!-- Menu à Esquerda -->
+                <ul class="menu-list">
+                    <li class="menu-item" data-target="pesquisar">1. Pesquisar</li>
+                    <li class="menu-item" data-target="detalhes">2. Escolher (Ver Detalhes)</li>
+                    <li class="menu-item" data-target="loja">3. Localizar a Loja</li>
+                    <li class="menu-item" data-target="ir-loja">4. Ir à Loja</li>
+                </ul>
+
+                <!-- Conteúdo à Direita -->
+                <div class="content-area">
+                    <!-- Conteúdo 1: Pesquisar -->
+                    <div class="content-item" id="pesquisar">
+                        <h3>Pesquisar</h3>
+                        <p>Use nossa barra de pesquisa ou explore as categorias (Beleza & Saúde, Eletrônicos, Móveis, etc.) para encontrar as melhores promoções. Filtre por preço, localização ou avaliações para facilitar sua busca.</p>
+                        <p>Dica: Salve seus favoritos clicando no coração ao lado dos produtos!</p>
+                    </div>
+
+                    <!-- Conteúdo 2: Escolher (Ver Detalhes) -->
+                    <div class="content-item" id="detalhes">
+                        <h3>Escolher (Ver Detalhes)</h3>
+                        <p>Clique no produto para ver detalhes como descrição, preço promocional, condições de pagamento e avaliações de outros clientes. Compare opções e escolha a que melhor atende às suas necessidades.</p>
+                        <p>Veja fotos, vídeos ou especificações técnicas para tomar a melhor decisão.</p>
+                    </div>
+
+                    <!-- Conteúdo 3: Localizar a Loja -->
+                    <div class="content-item" id="loja">
+                        <h3>Localizar a Loja</h3>
+                        <p>Confira o endereço da loja parceira que oferece a promoção. Use o mapa integrado para ver a distância e planejar sua visita. Verifique também os horários de funcionamento e contatos.</p>
+                        <p>Algumas lojas oferecem retirada no local ou entrega em casa!</p>
+                    </div>
+
+                    <!-- Conteúdo 4: Ir à Loja -->
+                    <div class="content-item" id="ir-loja">
+                        <h3>Ir à Loja</h3>
+                        <p>Visite a loja física com o cupom ou código da promoção gerado no site. Apresente-o no caixa para garantir seu desconto. Aproveite sua compra e volte para mais ofertas incríveis!</p>
+                        <p>Se preferir, finalize online em lojas com e-commerce integrado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript para controlar a exibição do conteúdo ao passar o mouse
+        const menuItems = document.querySelectorAll('.menu-item');
+        const contentItems = document.querySelectorAll('.content-item');
+
+        menuItems.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                const target = item.getAttribute('data-target');
+                contentItems.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === target) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Exibir o primeiro conteúdo por padrão
+        contentItems[0].classList.add('active');
+    </script>
+</body>
+</html>

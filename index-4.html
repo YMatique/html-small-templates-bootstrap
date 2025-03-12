@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero com Swiper - PromoMarket</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #4B0082 0%, #8A2BE2 100%);
+            color: #fff;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+            background: url('https://via.placeholder.com/1920x800') no-repeat center/cover;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin: 20px 0 30px;
+            opacity: 0.9;
+        }
+        .hero-btn {
+            background: #fff;
+            color: #4B0082;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .hero-btn:hover {
+            background: #4B0082;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .hero-img {
+            max-width: 80%;
+            height: auto;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .swiper-button-prev, .swiper-button-next {
+            color: #fff;
+            width: 40px;
+            height: 40px;
+        }
+        .swiper-button-prev:after, .swiper-button-next:after {
+            font-size: 20px;
+        }
+        .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 0.5;
+        }
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+        @media (max-width: 767px) {
+            .hero-title { font-size: 2.5rem; }
+            .hero-subtitle { font-size: 1.2rem; }
+            .hero-section { padding: 60px 0; }
+            .swiper-slide { min-height: 400px; flex-direction: column; }
+            .hero-img { max-width: 60%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Seção Hero com Swiper -->
+    <section class="hero-section">
+        <div class="swiper" id="heroSwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 hero-content">
+                                <h1 class="hero-title">As Melhores Promoções em Um Só Lugar!</h1>
+                                <p class="hero-subtitle">Economize em eletrônicos, móveis e mais com nossas ofertas exclusivas.</p>
+                                <a href="#explore" class="btn hero-btn">Explore Ofertas</a>
+                            </div>
+                            <div class="col-md-6 text-center hero-content">
+                                <img src="https://via.placeholder.com/500x400" alt="PromoMarket" class="hero-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 hero-content">
+                                <h1 class="hero-title">Descontos Imperdíveis Hoje!</h1>
+                                <p class="hero-subtitle">Aproveite promoções de lojas parceiras perto de você.</p>
+                                <a href="#descubra" class="btn hero-btn">Descubra Agora</a>
+                            </div>
+                            <div class="col-md-6 text-center hero-content">
+                                <img src="https://via.placeholder.com/500x400?text=Desconto" alt="Descontos" class="hero-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6 hero-content">
+                                <h1 class="hero-title">Sua Economia Começa Aqui!</h1>
+                                <p class="hero-subtitle">Encontre o que precisa com preços que você vai amar.</p>
+                                <a href="#comecar" class="btn hero-btn">Comece a Economizar</a>
+                            </div>
+                            <div class="col-md-6 text-center hero-content">
+                                <img src="https://via.placeholder.com/500x400?text=Economia" alt="Economia" class="hero-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Navegação -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- Paginação -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Inicialização do Swiper -->
+    <script>
+        const swiper = new Swiper('#heroSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: {
+                delay: 5000, // 5 segundos por slide
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'fade', // Transição suave entre slides
+            fadeEffect: {
+                crossFade: true,
+            },
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromoMarket - Ofertas Incríveis</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hover-scale { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-scale:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); }
+        .gradient-hero { background: linear-gradient(135deg, #4F46E5, #EC4899, #F59E0B); }
+        .animate-slide-up { animation: slideUp 1s ease-out; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-pink-600">PromoMarket</h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#onde-comprar" class="text-gray-700 hover:text-indigo-600 transition duration-300">Onde Comprar</a>
+                <a href="#beauty" class="text-gray-700 hover:text-indigo-600 transition duration-300">Beleza & Saúde</a>
+                <a href="#arts" class="text-gray-700 hover:text-indigo-600 transition duration-300">Artes</a>
+                <a href="#real-state" class="text-gray-700 hover:text-indigo-600 transition duration-300">Imóveis</a>
+                <a href="#electronics" class="text-gray-700 hover:text-indigo-600 transition duration-300">Eletrônicos</a>
+                <a href="#auto" class="text-gray-700 hover:text-indigo-600 transition duration-300">Auto</a>
+                <a href="#books" class="text-gray-700 hover:text-indigo-600 transition duration-300">Livros</a>
+                <a href="#furniture" class="text-gray-700 hover:text-indigo-600 transition duration-300">Móveis</a>
+            </div>
+            <button class="md:hidden text-gray-700">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-hero text-white py-28 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10 animate-slide-up">
+            <h2 class="text-5xl md:text-6xl font-extrabold mb-6">As Melhores Promoções em Um Só Lugar!</h2>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">Explore ofertas exclusivas de diversas lojas</p>
+            <button class="bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold shadow-lg hover:bg-indigo-100 transition duration-300">
+                Veja as Ofertas
+            </button>
+        </div>
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 1440 320">
+                <path fill="#fff" d="M0,64L48,90.7C96,117,192,171,288,181.3C384,192,480,160,576,149.3C672,139,768,149,864,165.3C960,181,1056,203,1152,197.3C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Segmentação -->
+    <section id="segmentacao" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-16 text-gray-800 animate-slide-up">Escolha Sua Categoria</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-indigo-500 p-6 rounded-xl shadow-xl hover-scale text-white">
+                    <h4 class="text-xl font-semibold">Onde Comprar</h4>
+                    <p class="text-sm opacity-90">Melhores lojas e ofertas</p>
+                </div>
+                <div class="bg-pink-500 p-6 rounded-xl shadow-xl hover-scale text-white">
+                    <h4 class="text-xl font-semibold">Beleza & Saúde</h4>
+                    <p class="text-sm opacity-90">Cosméticos e bem-estar</p>
+                </div>
+                <div class="bg-purple-500 p-6 rounded-xl shadow-xl hover-scale text-white">
+                    <h4 class="text-xl font-semibold">Artes</h4>
+                    <p class="text-sm opacity-90">Itens criativos e únicos</p>
+                </div>
+                <div class="bg-blue-500 p-6 rounded-xl shadow-xl hover-scale text-white">
+                    <h4 class="text-xl font-semibold">Imóveis</h4>
+                    <p class="text-sm opacity-90">Ofertas imobiliárias</p>
+                </div>
+                <div class="bg-green-500 p-6 rounded-xl shadow-xl hover-scale text-white">
+                    <h4 class="text-xl font-semibold">Eletrônicos</h4>
+                    <p class="text-sm opacity-90">Tecnologia em promoção</p>
+                </div>
+                <div class="bg-red-500 p-6 rounded-xl shadow-xl hover-scale text-white">
+                    <h4 class="text-xl font-semibold">Auto</h4>
+                    <p class="text-sm opacity-90">Peças e acessórios</p>
+                </div>
+                <div class="bg-yellow-500 p-6 rounded-xl shadow-xl hover-scale text-white">
+                    <h4 class="text-xl font-semibold">Livros</h4>
+                    <p class="text-sm opacity-90">Leituras com desconto</p>
+                </div>
+                <div class="bg-teal-500 p-6 rounded-xl shadow-xl hover-scale text-white">
+                    <h4 class="text-xl font-semibold">Móveis</h4>
+                    <p class="text-sm opacity-90">Decoração acessível</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ofertas em Destaque -->
+    <section class="bg-gray-100 py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-16 text-gray-800 animate-slide-up">Ofertas em Destaque</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover-scale">
+                    <img src="https://via.placeholder.com/300x200" alt="Oferta" class="w-full rounded-lg mb-4">
+                    <h4 class="font-semibold text-xl">Smart TV 4K</h4>
+                    <p class="text-gray-600">De R$ 3.000 por R$ 2.499</p>
+                    <button class="mt-4 bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition duration-300">
+                        Comprar Agora
+                    </button>
+                </div>
+                <!-- Adicionar mais ofertas -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-16 text-gray-800 animate-slide-up">O Que Dizem Nossos Clientes</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                    <p class="text-gray-600 italic">"Economizei muito comprando móveis aqui!"</p>
+                    <p class="mt-4 font-semibold text-indigo-600">- João R.</p>
+                </div>
+                <!-- Adicionar mais depoimentos -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Parceiros -->
+    <section class="bg-gray-100 py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-16 text-gray-800 animate-slide-up">Nossos Parceiros</h3>
+            <div class="flex flex-wrap justify-center gap-12">
+                <img src="https://via.placeholder.com/150x50" alt="Parceiro" class="hover-scale">
+                <!-- Adicionar mais parceiros -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog e Atualizações -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-16 text-gray-800 animate-slide-up">Blog & Atualizações</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover-scale">
+                    <img src="https://via.placeholder.com/300x200" alt="Post" class="w-full rounded-lg mb-4">
+                    <h4 class="font-semibold text-xl">Dicas de Decoração</h4>
+                    <p class="text-gray-600">Transforme sua casa com promoções</p>
+                </div>
+                <!-- Adicionar mais posts -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="gradient-hero text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center animate-slide-up">
+            <h3 class="text-4xl font-bold mb-6">Inscreva-se na Newsletter</h3>
+            <p class="text-xl mb-8 opacity-90">Receba as melhores promoções no seu e-mail</p>
+            <div class="max-w-lg mx-auto flex">
+                <input type="email" placeholder="Digite seu e-mail" class="w-full px-4 py-3 rounded-l-full text-gray-800 focus:outline-none">
+                <button class="bg-white text-indigo-600 px-6 py-3 rounded-r-full font-semibold hover:bg-gray-100 transition duration-300">
+                    Assinar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-lg">© 2025 PromoMarket. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
