@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace de Descontos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Seção 1: Descontos Direto da Fábrica */
+    .discount-section {
+      padding: 50px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .discount-section h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .discount-section p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .discount-section p em {
+      font-style: italic;
+      color: #e13725; /* Cor primária */
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    /* Seção 2: Ofertas com Garantia Total */
+    .guarantee-section {
+      position: relative;
+      padding: 80px 0;
+      color: #fff;
+      text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c'); /* Exemplo */
+      background-size: cover;
+      background-position: center;
+      min-height: 450px;
+      backdrop-filter: blur(8px); /* Efeito de desfoque no fundo */
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(97, 36, 29, 0.671); /* Cor primária #e13725 com 60% de opacidade */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .guarantee-section h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .guarantee-section p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    .guarantee-cards {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 1200px;
+      gap: 0;
+    }
+
+    .guarantee-card {
+      background-color: rgba(97, 36, 29, 0.671);
+      padding: 30px;
+      flex: 1; /* Faz os cards ocuparem todo o espaço igualmente */
+      text-align: center;
+      color: #333;
+      border-right: 1px solid rgba(0, 0, 0, 0.493); /* Divisor sutil entre os cards */
+    }
+
+    .guarantee-card:last-child {
+      border-right: none; /* Remove a borda do último card */
+    }
+
+    .guarantee-card h3 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #e13725; /* Cor primária no título */
+    }
+
+    .guarantee-card p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Botão comum */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #e13725; /* Cor primária */
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin-top: 30px;
+    }
+
+    .btn:hover {
+      background-color: #c12e20; /* Escurece no hover */
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .guarantee-cards {
+        flex-direction: column;
+        padding: 0 20px;
+      }
+
+      .guarantee-card {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .guarantee-card:last-child {
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Seção 1 -->
+  <section class="discount-section">
+    <h2>Descontos Direto da Fábrica</h2>
+    <p><em>Fonte direta da fábrica</em><br>Compre com confiança sabendo que você tem a melhor qualidade da produção a preços imbatíveis.</p>
+    <div class="card-container">
+      <div class="card">
+        <h3>Eletrônicos</h3>
+        <p>Smartphones e TVs com até 50% off.</p>
+      </div>
+      <div class="card">
+        <h3>Moda</h3>
+        <p>Roupas direto da fábrica por menos.</p>
+      </div>
+      <div class="card">
+        <h3>Casa</h3>
+        <p>Móveis e decoração a preço de custo.</p>
+      </div>
+    </div>
+    <a href="#" class="btn">Explore Ofertas</a>
+  </section>
+
+  <!-- Seção 2 -->
+  <section class="guarantee-section">
+    <div class="overlay">
+      <h2>Ofertas com Garantia Total</h2>
+      <p>Negocie com tranquilidade, da produção à proteção da compra, com descontos que você só encontra aqui.</p>
+      <div class="guarantee-cards">
+        <div class="guarantee-card">
+          <h3>Lojas Credenciadas</h3>
+          <p>Compre apenas de parceiros confiáveis, verificados para garantir a melhor experiência de compra.</p>
+        </div>
+        <div class="guarantee-card">
+          <h3>Ofertas Reais</h3>
+          <p>Descontos autênticos e verificados, sem truques ou promessas falsas – só preço justo.</p>
+        </div>
+      </div>
+      <a href="#" class="btn">Veja os Produtos</a>
+    </div>
+  </section>
+</body>
+</html>
